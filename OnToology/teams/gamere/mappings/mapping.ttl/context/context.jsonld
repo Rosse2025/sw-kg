@@ -1,0 +1,34 @@
+{
+  "@context" : {
+    "referenceFormulation" : {
+      "@id" : "http://semweb.mmlab.be/ns/rml#referenceFormulation"
+    },
+    "subjectMap" : {
+      "@id" : "http://www.w3.org/ns/r2rml#subjectMap"
+    },
+    "TriplesMap" : {
+      "@id" : "http://www.w3.org/ns/r2rml#TriplesMap"
+    },
+    "objectMap" : {
+      "@id" : "http://www.w3.org/ns/r2rml#objectMap"
+    },
+    "predicateObjectMap" : {
+      "@id" : "http://www.w3.org/ns/r2rml#predicateObjectMap"
+    },
+    "class" : {
+      "@id" : "http://www.w3.org/ns/r2rml#class"
+    },
+    "termType" : {
+      "@id" : "http://www.w3.org/ns/r2rml#termType"
+    },
+    "predicate" : {
+      "@id" : "http://www.w3.org/ns/r2rml#predicate"
+    },
+    "datatype" : {
+      "@id" : "http://www.w3.org/ns/r2rml#datatype"
+    },
+    "logicalSource" : {
+      "@id" : "http://semweb.mmlab.be/ns/rml#logicalSource"
+    }
+  }
+}
