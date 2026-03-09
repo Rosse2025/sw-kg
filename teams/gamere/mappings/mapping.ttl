@@ -5,6 +5,7 @@
 @prefix ql: <http://semweb.mmlab.be/ns/ql#> .
 @prefix : <http://example.org/def/gamere#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
 
 
 #################################################
@@ -27,6 +28,13 @@ rr:subjectMap [
 rr:predicateObjectMap [
  rr:predicate :nomePraia ;
  rr:objectMap [ rml:reference "PRAIA" ]
+];
+
+rr:predicateObjectMap [
+ rr:predicate owl:sameAs ;
+ rr:objectMap [
+  rr:template "https://www.wikidata.org/entity/{wikidata_praia}"
+ ]
 ];
 
 rr:predicateObjectMap [
@@ -130,6 +138,13 @@ rr:predicateObjectMap [
 ];
 
 rr:predicateObjectMap [
+ rr:predicate owl:sameAs ;
+ rr:objectMap [
+  rr:template "https://www.wikidata.org/entity/{wikidata_concello}"
+ ]
+];
+
+rr:predicateObjectMap [
  rr:predicate :codigoConcello ;
  rr:objectMap [
   rml:reference "CODIGO_CONCELLO" ;
@@ -167,9 +182,18 @@ rr:predicateObjectMap [
 ];
 
 rr:predicateObjectMap [
+ rr:predicate owl:sameAs ;
+ rr:objectMap [
+  rr:template "https://www.wikidata.org/entity/{wikidata_provincia}"
+ ]
+];
+
+rr:predicateObjectMap [
  rr:predicate :codigoProvincia ;
  rr:objectMap [
   rml:reference "CODIGO_PROVINCIA" ;
   rr:datatype xsd:integer
  ]
 ].
+
+# End of mapping
