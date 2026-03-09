@@ -1,0 +1,225 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.w3.org/2002/07/owl#> .
+
+[ rdf:type owl:Ontology
+ ] .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://semweb.mmlab.be/ns/rml#logicalSource
+<http://semweb.mmlab.be/ns/rml#logicalSource> rdf:type owl:AnnotationProperty .
+
+
+###  http://semweb.mmlab.be/ns/rml#reference
+<http://semweb.mmlab.be/ns/rml#reference> rdf:type owl:AnnotationProperty .
+
+
+###  http://semweb.mmlab.be/ns/rml#referenceFormulation
+<http://semweb.mmlab.be/ns/rml#referenceFormulation> rdf:type owl:AnnotationProperty .
+
+
+###  http://semweb.mmlab.be/ns/rml#source
+<http://semweb.mmlab.be/ns/rml#source> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/ns/r2rml#class
+<http://www.w3.org/ns/r2rml#class> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/ns/r2rml#datatype
+<http://www.w3.org/ns/r2rml#datatype> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/ns/r2rml#objectMap
+<http://www.w3.org/ns/r2rml#objectMap> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/ns/r2rml#predicate
+<http://www.w3.org/ns/r2rml#predicate> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/ns/r2rml#predicateObjectMap
+<http://www.w3.org/ns/r2rml#predicateObjectMap> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/ns/r2rml#subjectMap
+<http://www.w3.org/ns/r2rml#subjectMap> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/ns/r2rml#template
+<http://www.w3.org/ns/r2rml#template> rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.w3.org/ns/r2rml#TriplesMap
+<http://www.w3.org/ns/r2rml#TriplesMap> rdf:type owl:Class .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://example.org/mapping/#ConcelloMapping
+<http://example.org/mapping/#ConcelloMapping> rdf:type owl:NamedIndividual ,
+                                                       <http://www.w3.org/ns/r2rml#TriplesMap> ;
+                                              <http://semweb.mmlab.be/ns/rml#logicalSource> _:genid2 ;
+                                              <http://www.w3.org/ns/r2rml#predicateObjectMap> _:genid3 ,
+                                                                                              _:genid5 ,
+                                                                                              _:genid7 ,
+                                                                                              _:genid9 ;
+                                              <http://www.w3.org/ns/r2rml#subjectMap> _:genid11 .
+
+_:genid2 <http://semweb.mmlab.be/ns/rml#referenceFormulation> <http://semweb.mmlab.be/ns/ql#CSV> ;
+          <http://semweb.mmlab.be/ns/rml#source> "data/PraiasBandeiraAzul-2025-csv.csv" .
+
+_:genid3 <http://www.w3.org/ns/r2rml#objectMap> [ <http://semweb.mmlab.be/ns/rml#reference> "CONCELLO"
+                                                 ] ;
+          <http://www.w3.org/ns/r2rml#predicate> <http://example.org/def/gamere#nameConcello> .
+
+_:genid5 <http://www.w3.org/ns/r2rml#objectMap> [ <http://www.w3.org/ns/r2rml#template> "https://www.wikidata.org/entity/{wikidata_concello}"
+                                                 ] ;
+          <http://www.w3.org/ns/r2rml#predicate> owl:sameAs .
+
+_:genid7 <http://www.w3.org/ns/r2rml#objectMap> _:genid8 ;
+          <http://www.w3.org/ns/r2rml#predicate> <http://example.org/def/gamere#codigoConcello> .
+
+_:genid9 <http://www.w3.org/ns/r2rml#objectMap> [ <http://www.w3.org/ns/r2rml#template> "http://example.org/resource/provincia/{CODIGO_PROVINCIA}"
+                                                 ] ;
+          <http://www.w3.org/ns/r2rml#predicate> <http://example.org/def/gamere#perteneceA> .
+
+_:genid11 <http://www.w3.org/ns/r2rml#class> <http://example.org/def/gamere#Concello> ;
+           <http://www.w3.org/ns/r2rml#template> "http://example.org/resource/concello/{CODIGO_CONCELLO}" .
+
+_:genid8 <http://semweb.mmlab.be/ns/rml#reference> "CODIGO_CONCELLO" ;
+          <http://www.w3.org/ns/r2rml#datatype> xsd:integer .
+
+
+###  http://example.org/mapping/#PraiaMapping
+<http://example.org/mapping/#PraiaMapping> rdf:type owl:NamedIndividual ,
+                                                    <http://www.w3.org/ns/r2rml#TriplesMap> ;
+                                           <http://semweb.mmlab.be/ns/rml#logicalSource> _:genid12 ;
+                                           <http://www.w3.org/ns/r2rml#predicateObjectMap> _:genid13 ,
+                                                                                           _:genid15 ,
+                                                                                           _:genid17 ,
+                                                                                           _:genid19 ,
+                                                                                           _:genid21 ,
+                                                                                           _:genid23 ,
+                                                                                           _:genid25 ,
+                                                                                           _:genid27 ;
+                                           <http://www.w3.org/ns/r2rml#subjectMap> _:genid29 .
+
+_:genid12 <http://semweb.mmlab.be/ns/rml#referenceFormulation> <http://semweb.mmlab.be/ns/ql#CSV> ;
+           <http://semweb.mmlab.be/ns/rml#source> "data/PraiasBandeiraAzul-2025-csv.csv" .
+
+_:genid13 <http://www.w3.org/ns/r2rml#objectMap> [ <http://semweb.mmlab.be/ns/rml#reference> "PRAIA"
+                                                  ] ;
+           <http://www.w3.org/ns/r2rml#predicate> <http://example.org/def/gamere#nomePraia> .
+
+_:genid15 <http://www.w3.org/ns/r2rml#objectMap> [ <http://www.w3.org/ns/r2rml#template> "https://www.wikidata.org/entity/{wikidata_praia}"
+                                                  ] ;
+           <http://www.w3.org/ns/r2rml#predicate> owl:sameAs .
+
+_:genid17 <http://www.w3.org/ns/r2rml#objectMap> _:genid18 ;
+           <http://www.w3.org/ns/r2rml#predicate> <http://example.org/def/gamere#lonxitude> .
+
+_:genid19 <http://www.w3.org/ns/r2rml#objectMap> [ <http://semweb.mmlab.be/ns/rml#reference> "TIPO_DE_AREA"
+                                                  ] ;
+           <http://www.w3.org/ns/r2rml#predicate> <http://example.org/def/gamere#tipoArena> .
+
+_:genid21 <http://www.w3.org/ns/r2rml#objectMap> [ <http://semweb.mmlab.be/ns/rml#reference> "TIPO"
+                                                  ] ;
+           <http://www.w3.org/ns/r2rml#predicate> <http://example.org/def/gamere#entorno> .
+
+_:genid23 <http://www.w3.org/ns/r2rml#objectMap> _:genid24 ;
+           <http://www.w3.org/ns/r2rml#predicate> <http://example.org/def/gamere#url> .
+
+_:genid25 <http://www.w3.org/ns/r2rml#objectMap> [ <http://www.w3.org/ns/r2rml#template> "http://example.org/resource/concello/{CODIGO_CONCELLO}"
+                                                  ] ;
+           <http://www.w3.org/ns/r2rml#predicate> <http://example.org/def/gamere#situadaEn> .
+
+_:genid27 <http://www.w3.org/ns/r2rml#objectMap> [ <http://www.w3.org/ns/r2rml#template> "http://example.org/resource/ubicacion/{Coordenada_X}_{Coordenada_Y}"
+                                                  ] ;
+           <http://www.w3.org/ns/r2rml#predicate> <http://example.org/def/gamere#estaEn> .
+
+_:genid29 <http://www.w3.org/ns/r2rml#class> <http://example.org/def/gamere#Praia> ;
+           <http://www.w3.org/ns/r2rml#template> "http://example.org/resource/praia/{CODIGO_CONCELLO}_{PRAIA}" .
+
+_:genid18 <http://semweb.mmlab.be/ns/rml#reference> "LONXITUDE" ;
+           <http://www.w3.org/ns/r2rml#datatype> xsd:integer .
+
+_:genid24 <http://semweb.mmlab.be/ns/rml#reference> "MAIS_INFORMACION_EN_TURGALICIA" ;
+           <http://www.w3.org/ns/r2rml#datatype> xsd:anyURI .
+
+
+###  http://example.org/mapping/#ProvinciaMapping
+<http://example.org/mapping/#ProvinciaMapping> rdf:type owl:NamedIndividual ,
+                                                        <http://www.w3.org/ns/r2rml#TriplesMap> ;
+                                               <http://semweb.mmlab.be/ns/rml#logicalSource> _:genid30 ;
+                                               <http://www.w3.org/ns/r2rml#predicateObjectMap> _:genid31 ,
+                                                                                               _:genid33 ,
+                                                                                               _:genid35 ;
+                                               <http://www.w3.org/ns/r2rml#subjectMap> _:genid37 .
+
+_:genid30 <http://semweb.mmlab.be/ns/rml#referenceFormulation> <http://semweb.mmlab.be/ns/ql#CSV> ;
+           <http://semweb.mmlab.be/ns/rml#source> "data/PraiasBandeiraAzul-2025-csv.csv" .
+
+_:genid31 <http://www.w3.org/ns/r2rml#objectMap> _:genid32 ;
+           <http://www.w3.org/ns/r2rml#predicate> <http://example.org/def/gamere#codigoProvincia> .
+
+_:genid33 <http://www.w3.org/ns/r2rml#objectMap> [ <http://www.w3.org/ns/r2rml#template> "https://www.wikidata.org/entity/{wikidata_provincia}"
+                                                  ] ;
+           <http://www.w3.org/ns/r2rml#predicate> owl:sameAs .
+
+_:genid35 <http://www.w3.org/ns/r2rml#objectMap> [ <http://semweb.mmlab.be/ns/rml#reference> "PROVINCIA"
+                                                  ] ;
+           <http://www.w3.org/ns/r2rml#predicate> <http://example.org/def/gamere#nameProvincia> .
+
+_:genid37 <http://www.w3.org/ns/r2rml#class> <http://example.org/def/gamere#Provincia> ;
+           <http://www.w3.org/ns/r2rml#template> "http://example.org/resource/provincia/{CODIGO_PROVINCIA}" .
+
+_:genid32 <http://semweb.mmlab.be/ns/rml#reference> "CODIGO_PROVINCIA" ;
+           <http://www.w3.org/ns/r2rml#datatype> xsd:integer .
+
+
+###  http://example.org/mapping/#UbicacionMapping
+<http://example.org/mapping/#UbicacionMapping> rdf:type owl:NamedIndividual ,
+                                                        <http://www.w3.org/ns/r2rml#TriplesMap> ;
+                                               <http://semweb.mmlab.be/ns/rml#logicalSource> _:genid38 ;
+                                               <http://www.w3.org/ns/r2rml#predicateObjectMap> _:genid39 ,
+                                                                                               _:genid41 ,
+                                                                                               _:genid43 ;
+                                               <http://www.w3.org/ns/r2rml#subjectMap> _:genid45 .
+
+_:genid38 <http://semweb.mmlab.be/ns/rml#referenceFormulation> <http://semweb.mmlab.be/ns/ql#CSV> ;
+           <http://semweb.mmlab.be/ns/rml#source> "data/PraiasBandeiraAzul-2025-csv.csv" .
+
+_:genid39 <http://www.w3.org/ns/r2rml#objectMap> [ <http://semweb.mmlab.be/ns/rml#reference> "LUGAR_E_PARROQUIA"
+                                                  ] ;
+           <http://www.w3.org/ns/r2rml#predicate> <http://example.org/def/gamere#descripcion> .
+
+_:genid41 <http://www.w3.org/ns/r2rml#objectMap> _:genid42 ;
+           <http://www.w3.org/ns/r2rml#predicate> <http://example.org/def/gamere#coordenadasY> .
+
+_:genid43 <http://www.w3.org/ns/r2rml#objectMap> _:genid44 ;
+           <http://www.w3.org/ns/r2rml#predicate> <http://example.org/def/gamere#coordenadasX> .
+
+_:genid45 <http://www.w3.org/ns/r2rml#class> <http://example.org/def/gamere#Ubicacion> ;
+           <http://www.w3.org/ns/r2rml#template> "http://example.org/resource/ubicacion/{Coordenada_X}_{Coordenada_Y}" .
+
+_:genid42 <http://semweb.mmlab.be/ns/rml#reference> "Coordenada_Y" ;
+           <http://www.w3.org/ns/r2rml#datatype> xsd:float .
+
+_:genid44 <http://semweb.mmlab.be/ns/rml#reference> "Coordenada_X" ;
+           <http://www.w3.org/ns/r2rml#datatype> xsd:float .
+
+
+###  Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/
