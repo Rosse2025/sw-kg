@@ -12,13 +12,13 @@
 a rr:TriplesMap ;
 
 rml:logicalSource [
- rml:source "../data/PraiasBandeiraAzul-2025-csv.csv" 
+ rml:source "../data/PraiasBandeiraAzul-2025-csv.csv" ;
  rml:referenceFormulation ql:CSV;
  rml:separator ";"
 ];
 
 rr:subjectMap [
- rr:template "http://example.org/resource/praia/{CÓDIGO CONCELLO}_{PRAIA}" ;
+ rr:template "http://example.org/resource/praia/{CODIGO_CONCELLO}_{PRAIA}" ;
  rr:class :Praia
 ];
 
@@ -37,7 +37,7 @@ rr:predicateObjectMap [
 
 rr:predicateObjectMap [
  rr:predicate :tipoArena ;
- rr:objectMap [ rml:reference "TIPO DE AREA" ]
+ rr:objectMap [ rml:reference "TIPO_DE_AREA" ]
 ];
 
 rr:predicateObjectMap [
@@ -48,7 +48,7 @@ rr:predicateObjectMap [
 rr:predicateObjectMap [
  rr:predicate :url ;
  rr:objectMap [
-  rml:reference "MaIS INFORMACIÓN EN TURGALICIA" ;
+  rml:reference "MAIS_INFORMACION_EN_TURGALICIA" ;
   rr:datatype xsd:anyURI
  ]
 ];
@@ -56,14 +56,14 @@ rr:predicateObjectMap [
 rr:predicateObjectMap [
  rr:predicate :situadaEn ;
  rr:objectMap [
-  rr:template "http://example.org/resource/concello/{CÓDIGO CONCELLO}"
+  rr:template "http://example.org/resource/concello/{CODIGO_CONCELLO}"
  ]
 ];
 
 rr:predicateObjectMap [
  rr:predicate :estaEn ;
  rr:objectMap [
-  rr:template "http://example.org/resource/ubicacion/{Coordenada X}_{Coordenada Y}"
+  rr:template "http://example.org/resource/ubicacion/{Coordenada_X}_{Coordenada_Y}"
  ]
 ].
 
@@ -75,20 +75,20 @@ rr:predicateObjectMap [
 a rr:TriplesMap ;
 
 rml:logicalSource [
- rml:source "../data/PraiasBandeiraAzul-2025-csv.csv" 
+ rml:source "../data/PraiasBandeiraAzul-2025-csv.csv" ;
  rml:referenceFormulation ql:CSV;
  rml:separator ";"
 ];
 
 rr:subjectMap [
- rr:template "http://example.org/resource/ubicacion/{Coordenada X}_{Coordenada Y}" ;
+ rr:template "http://example.org/resource/ubicacion/{Coordenada_X}_{Coordenada_Y}" ;
  rr:class :Ubicacion
 ];
 
 rr:predicateObjectMap [
  rr:predicate :coordenadasX ;
  rr:objectMap [
-  rml:reference "Coordenada X" ;
+  rml:reference "Coordenada_X" ;
   rr:datatype xsd:float
  ]
 ];
@@ -96,14 +96,14 @@ rr:predicateObjectMap [
 rr:predicateObjectMap [
  rr:predicate :coordenadasY ;
  rr:objectMap [
-  rml:reference "Coordenada Y" ;
+  rml:reference "Coordenada_Y" ;
   rr:datatype xsd:float
  ]
 ];
 
 rr:predicateObjectMap [
  rr:predicate :descripcion ;
- rr:objectMap [ rml:reference "LUGAR E PARROQUIA" ]
+ rr:objectMap [ rml:reference "LUGAR_E_PARROQUIA" ]
 ].
 
 #################################################
@@ -114,13 +114,13 @@ rr:predicateObjectMap [
 a rr:TriplesMap ;
 
 rml:logicalSource [
-rml:source "../data/PraiasBandeiraAzul-2025-csv.csv" 
+rml:source "../data/PraiasBandeiraAzul-2025-csv.csv" ;
  rml:referenceFormulation ql:CSV;
  rml:separator ";"
 ];
 
 rr:subjectMap [
- rr:template "http://example.org/resource/concello/{CÓDIGO CONCELLO}" ;
+ rr:template "http://example.org/resource/concello/{CODIGO_CONCELLO}" ;
  rr:class :Concello
 ];
 
@@ -132,7 +132,7 @@ rr:predicateObjectMap [
 rr:predicateObjectMap [
  rr:predicate :codigoConcello ;
  rr:objectMap [
-  rml:reference "CÓDIGO CONCELLO" ;
+  rml:reference "CODIGO_CONCELLO" ;
   rr:datatype xsd:integer
  ]
 ];
@@ -140,7 +140,7 @@ rr:predicateObjectMap [
 rr:predicateObjectMap [
  rr:predicate :perteneceA ;
  rr:objectMap [
-  rr:template "http://example.org/resource/provincia/{CÓDIGO PROVINCIA}"
+  rr:template "http://example.org/resource/provincia/{CODIGO_PROVINCIA}"
  ]
 ].
 
@@ -152,13 +152,13 @@ rr:predicateObjectMap [
 a rr:TriplesMap ;
 
 rml:logicalSource [
- rml:source "../data/PraiasBandeiraAzul-2025-csv.csv" 
+ rml:source "../data/PraiasBandeiraAzul-2025-csv.csv" ;
  rml:referenceFormulation ql:CSV;
  rml:separator ";"
 ];
 
 rr:subjectMap [
- rr:template "http://example.org/resource/provincia/{CÓDIGO PROVINCIA}" ;
+ rr:template "http://example.org/resource/provincia/{CODIGO_PROVINCIA}" ;
  rr:class :Provincia
 ];
 
@@ -170,7 +170,7 @@ rr:predicateObjectMap [
 rr:predicateObjectMap [
  rr:predicate :codigoProvincia ;
  rr:objectMap [
-  rml:reference "CÓDIGO PROVINCIA" ;
+  rml:reference "CODIGO_PROVINCIA" ;
   rr:datatype xsd:integer
  ]
 ].
