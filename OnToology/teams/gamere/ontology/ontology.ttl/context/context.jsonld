@@ -61,7 +61,7 @@
       "@type" : "@id"
     },
     "title" : {
-      "@id" : "http://purl.org/dc/terms/title"
+      "@id" : "http://purl.org/dc/elements/1.1/title"
     },
     "codigoConcello" : {
       "@id" : "http://example.org/def/gamere#codigoConcello",
