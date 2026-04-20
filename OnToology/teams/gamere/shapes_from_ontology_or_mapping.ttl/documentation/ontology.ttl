@@ -1,0 +1,249 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.w3.org/2002/07/owl#> .
+
+[ rdf:type owl:Ontology
+ ] .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://www.w3.org/ns/shacl#class
+<http://www.w3.org/ns/shacl#class> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/ns/shacl#datatype
+<http://www.w3.org/ns/shacl#datatype> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/ns/shacl#maxCount
+<http://www.w3.org/ns/shacl#maxCount> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/ns/shacl#minCount
+<http://www.w3.org/ns/shacl#minCount> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/ns/shacl#name
+<http://www.w3.org/ns/shacl#name> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/ns/shacl#nodeKind
+<http://www.w3.org/ns/shacl#nodeKind> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/ns/shacl#path
+<http://www.w3.org/ns/shacl#path> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/ns/shacl#property
+<http://www.w3.org/ns/shacl#property> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/ns/shacl#targetClass
+<http://www.w3.org/ns/shacl#targetClass> rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.w3.org/ns/shacl#NodeShape
+<http://www.w3.org/ns/shacl#NodeShape> rdf:type owl:Class .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://example.com/concellos_0/shape
+<http://example.com/concellos_0/shape> rdf:type owl:NamedIndividual ,
+                                                <http://www.w3.org/ns/shacl#NodeShape> ;
+                                       rdfs:label "Concello" ;
+                                       <http://www.w3.org/ns/shacl#name> "Concello" ;
+                                       <http://www.w3.org/ns/shacl#nodeKind> <http://www.w3.org/ns/shacl#IRI> ;
+                                       <http://www.w3.org/ns/shacl#property> _:genid2 ,
+                                                                             _:genid3 ,
+                                                                             _:genid4 ,
+                                                                             _:genid5 ;
+                                       <http://www.w3.org/ns/shacl#targetClass> <http://example.org/def/gamere#Concello> .
+
+_:genid2 rdfs:label "name concello" ;
+          <http://www.w3.org/ns/shacl#datatype> xsd:string ;
+          <http://www.w3.org/ns/shacl#maxCount> 1 ;
+          <http://www.w3.org/ns/shacl#minCount> 1 ;
+          <http://www.w3.org/ns/shacl#name> "name concello" ;
+          <http://www.w3.org/ns/shacl#nodeKind> <http://www.w3.org/ns/shacl#Literal> ;
+          <http://www.w3.org/ns/shacl#path> <http://example.org/def/gamere#nameConcello> .
+
+_:genid3 rdfs:label "same as" ;
+          <http://www.w3.org/ns/shacl#maxCount> 1 ;
+          <http://www.w3.org/ns/shacl#name> "same as" ;
+          <http://www.w3.org/ns/shacl#nodeKind> <http://www.w3.org/ns/shacl#IRI> ;
+          <http://www.w3.org/ns/shacl#path> owl:sameAs .
+
+_:genid4 rdfs:label "pertenece a" ;
+          <http://www.w3.org/ns/shacl#class> <http://example.org/def/gamere#Provincia> ;
+          <http://www.w3.org/ns/shacl#maxCount> 1 ;
+          <http://www.w3.org/ns/shacl#minCount> 1 ;
+          <http://www.w3.org/ns/shacl#name> "pertenece a" ;
+          <http://www.w3.org/ns/shacl#nodeKind> <http://www.w3.org/ns/shacl#IRI> ;
+          <http://www.w3.org/ns/shacl#path> <http://example.org/def/gamere#perteneceA> .
+
+_:genid5 rdfs:label "codigo concello" ;
+          <http://www.w3.org/ns/shacl#datatype> xsd:integer ;
+          <http://www.w3.org/ns/shacl#maxCount> 1 ;
+          <http://www.w3.org/ns/shacl#minCount> 1 ;
+          <http://www.w3.org/ns/shacl#name> "codigo concello" ;
+          <http://www.w3.org/ns/shacl#nodeKind> <http://www.w3.org/ns/shacl#Literal> ;
+          <http://www.w3.org/ns/shacl#path> <http://example.org/def/gamere#codigoConcello> .
+
+
+###  http://example.com/playas_0/shape
+<http://example.com/playas_0/shape> rdf:type owl:NamedIndividual ,
+                                             <http://www.w3.org/ns/shacl#NodeShape> ;
+                                    rdfs:label "Praia" ;
+                                    <http://www.w3.org/ns/shacl#name> "Praia" ;
+                                    <http://www.w3.org/ns/shacl#nodeKind> <http://www.w3.org/ns/shacl#IRI> ;
+                                    <http://www.w3.org/ns/shacl#property> _:genid6 ,
+                                                                          _:genid7 ,
+                                                                          _:genid8 ,
+                                                                          _:genid9 ,
+                                                                          _:genid10 ,
+                                                                          _:genid11 ,
+                                                                          _:genid12 ,
+                                                                          _:genid13 ;
+                                    <http://www.w3.org/ns/shacl#targetClass> <http://example.org/def/gamere#Praia> .
+
+_:genid6 rdfs:label "nome praia" ;
+          <http://www.w3.org/ns/shacl#datatype> xsd:string ;
+          <http://www.w3.org/ns/shacl#maxCount> 1 ;
+          <http://www.w3.org/ns/shacl#minCount> 1 ;
+          <http://www.w3.org/ns/shacl#name> "nome praia" ;
+          <http://www.w3.org/ns/shacl#nodeKind> <http://www.w3.org/ns/shacl#Literal> ;
+          <http://www.w3.org/ns/shacl#path> <http://example.org/def/gamere#nomePraia> .
+
+_:genid7 rdfs:label "situada en" ;
+          <http://www.w3.org/ns/shacl#class> <http://example.org/def/gamere#Concello> ;
+          <http://www.w3.org/ns/shacl#maxCount> 1 ;
+          <http://www.w3.org/ns/shacl#minCount> 1 ;
+          <http://www.w3.org/ns/shacl#name> "situada en" ;
+          <http://www.w3.org/ns/shacl#nodeKind> <http://www.w3.org/ns/shacl#IRI> ;
+          <http://www.w3.org/ns/shacl#path> <http://example.org/def/gamere#situadaEn> .
+
+_:genid8 rdfs:label "tipo arena" ;
+          <http://www.w3.org/ns/shacl#datatype> xsd:string ;
+          <http://www.w3.org/ns/shacl#maxCount> 1 ;
+          <http://www.w3.org/ns/shacl#name> "tipo arena" ;
+          <http://www.w3.org/ns/shacl#nodeKind> <http://www.w3.org/ns/shacl#Literal> ;
+          <http://www.w3.org/ns/shacl#path> <http://example.org/def/gamere#tipoArena> .
+
+_:genid9 rdfs:label "url" ;
+          <http://www.w3.org/ns/shacl#maxCount> 1 ;
+          <http://www.w3.org/ns/shacl#name> "url" ;
+          <http://www.w3.org/ns/shacl#nodeKind> <http://www.w3.org/ns/shacl#IRI> ;
+          <http://www.w3.org/ns/shacl#path> <http://example.org/def/gamere#url> .
+
+_:genid10 rdfs:label "esta en" ;
+           <http://www.w3.org/ns/shacl#class> <http://example.org/def/gamere#Ubicacion> ;
+           <http://www.w3.org/ns/shacl#maxCount> 1 ;
+           <http://www.w3.org/ns/shacl#minCount> 1 ;
+           <http://www.w3.org/ns/shacl#name> "esta en" ;
+           <http://www.w3.org/ns/shacl#nodeKind> <http://www.w3.org/ns/shacl#IRI> ;
+           <http://www.w3.org/ns/shacl#path> <http://example.org/def/gamere#estaEn> .
+
+_:genid11 rdfs:label "lonxitude" ;
+           <http://www.w3.org/ns/shacl#datatype> xsd:integer ;
+           <http://www.w3.org/ns/shacl#maxCount> 1 ;
+           <http://www.w3.org/ns/shacl#name> "lonxitude" ;
+           <http://www.w3.org/ns/shacl#nodeKind> <http://www.w3.org/ns/shacl#Literal> ;
+           <http://www.w3.org/ns/shacl#path> <http://example.org/def/gamere#lonxitude> .
+
+_:genid12 rdfs:label "same as" ;
+           <http://www.w3.org/ns/shacl#maxCount> 1 ;
+           <http://www.w3.org/ns/shacl#name> "same as" ;
+           <http://www.w3.org/ns/shacl#nodeKind> <http://www.w3.org/ns/shacl#IRI> ;
+           <http://www.w3.org/ns/shacl#path> owl:sameAs .
+
+_:genid13 rdfs:label "entorno" ;
+           <http://www.w3.org/ns/shacl#datatype> xsd:string ;
+           <http://www.w3.org/ns/shacl#maxCount> 1 ;
+           <http://www.w3.org/ns/shacl#name> "entorno" ;
+           <http://www.w3.org/ns/shacl#nodeKind> <http://www.w3.org/ns/shacl#Literal> ;
+           <http://www.w3.org/ns/shacl#path> <http://example.org/def/gamere#entorno> .
+
+
+###  http://example.com/provincias_0/shape
+<http://example.com/provincias_0/shape> rdf:type owl:NamedIndividual ,
+                                                 <http://www.w3.org/ns/shacl#NodeShape> ;
+                                        rdfs:label "Provincia" ;
+                                        <http://www.w3.org/ns/shacl#name> "Provincia" ;
+                                        <http://www.w3.org/ns/shacl#nodeKind> <http://www.w3.org/ns/shacl#IRI> ;
+                                        <http://www.w3.org/ns/shacl#property> _:genid14 ,
+                                                                              _:genid15 ,
+                                                                              _:genid16 ;
+                                        <http://www.w3.org/ns/shacl#targetClass> <http://example.org/def/gamere#Provincia> .
+
+_:genid14 rdfs:label "name provincia" ;
+           <http://www.w3.org/ns/shacl#datatype> xsd:string ;
+           <http://www.w3.org/ns/shacl#maxCount> 1 ;
+           <http://www.w3.org/ns/shacl#minCount> 1 ;
+           <http://www.w3.org/ns/shacl#name> "name provincia" ;
+           <http://www.w3.org/ns/shacl#nodeKind> <http://www.w3.org/ns/shacl#Literal> ;
+           <http://www.w3.org/ns/shacl#path> <http://example.org/def/gamere#nameProvincia> .
+
+_:genid15 rdfs:label "codigo provincia" ;
+           <http://www.w3.org/ns/shacl#datatype> xsd:integer ;
+           <http://www.w3.org/ns/shacl#maxCount> 1 ;
+           <http://www.w3.org/ns/shacl#minCount> 1 ;
+           <http://www.w3.org/ns/shacl#name> "codigo provincia" ;
+           <http://www.w3.org/ns/shacl#nodeKind> <http://www.w3.org/ns/shacl#Literal> ;
+           <http://www.w3.org/ns/shacl#path> <http://example.org/def/gamere#codigoProvincia> .
+
+_:genid16 rdfs:label "same as" ;
+           <http://www.w3.org/ns/shacl#maxCount> 1 ;
+           <http://www.w3.org/ns/shacl#name> "same as" ;
+           <http://www.w3.org/ns/shacl#nodeKind> <http://www.w3.org/ns/shacl#IRI> ;
+           <http://www.w3.org/ns/shacl#path> owl:sameAs .
+
+
+###  http://example.com/ubicaciones_0/shape
+<http://example.com/ubicaciones_0/shape> rdf:type owl:NamedIndividual ,
+                                                  <http://www.w3.org/ns/shacl#NodeShape> ;
+                                         rdfs:label "Ubicacion" ;
+                                         <http://www.w3.org/ns/shacl#name> "Ubicacion" ;
+                                         <http://www.w3.org/ns/shacl#nodeKind> <http://www.w3.org/ns/shacl#IRI> ;
+                                         <http://www.w3.org/ns/shacl#property> _:genid17 ,
+                                                                               _:genid18 ,
+                                                                               _:genid19 ;
+                                         <http://www.w3.org/ns/shacl#targetClass> <http://example.org/def/gamere#Ubicacion> .
+
+_:genid17 rdfs:label "descripcion" ;
+           <http://www.w3.org/ns/shacl#datatype> xsd:string ;
+           <http://www.w3.org/ns/shacl#maxCount> 2 ;
+           <http://www.w3.org/ns/shacl#name> "descripcion" ;
+           <http://www.w3.org/ns/shacl#nodeKind> <http://www.w3.org/ns/shacl#Literal> ;
+           <http://www.w3.org/ns/shacl#path> <http://example.org/def/gamere#descripcion> .
+
+_:genid18 rdfs:label "coordenadas y" ;
+           <http://www.w3.org/ns/shacl#datatype> xsd:float ;
+           <http://www.w3.org/ns/shacl#maxCount> 1 ;
+           <http://www.w3.org/ns/shacl#minCount> 1 ;
+           <http://www.w3.org/ns/shacl#name> "coordenadas y" ;
+           <http://www.w3.org/ns/shacl#nodeKind> <http://www.w3.org/ns/shacl#Literal> ;
+           <http://www.w3.org/ns/shacl#path> <http://example.org/def/gamere#coordenadasY> .
+
+_:genid19 rdfs:label "coordenadas x" ;
+           <http://www.w3.org/ns/shacl#datatype> xsd:float ;
+           <http://www.w3.org/ns/shacl#maxCount> 1 ;
+           <http://www.w3.org/ns/shacl#minCount> 1 ;
+           <http://www.w3.org/ns/shacl#name> "coordenadas x" ;
+           <http://www.w3.org/ns/shacl#nodeKind> <http://www.w3.org/ns/shacl#Literal> ;
+           <http://www.w3.org/ns/shacl#path> <http://example.org/def/gamere#coordenadasX> .
+
+
+###  Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/
