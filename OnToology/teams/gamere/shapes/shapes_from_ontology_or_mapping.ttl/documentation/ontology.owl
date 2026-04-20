@@ -1,0 +1,343 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.w3.org/2002/07/owl"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:shacl="http://www.w3.org/ns/shacl#">
+    <Ontology/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://www.w3.org/ns/shacl#class -->
+
+
+    <AnnotationProperty rdf:about="http://www.w3.org/ns/shacl#class"/>
+    
+
+
+    <!-- http://www.w3.org/ns/shacl#datatype -->
+
+
+    <AnnotationProperty rdf:about="http://www.w3.org/ns/shacl#datatype"/>
+    
+
+
+    <!-- http://www.w3.org/ns/shacl#maxCount -->
+
+
+    <AnnotationProperty rdf:about="http://www.w3.org/ns/shacl#maxCount"/>
+    
+
+
+    <!-- http://www.w3.org/ns/shacl#minCount -->
+
+
+    <AnnotationProperty rdf:about="http://www.w3.org/ns/shacl#minCount"/>
+    
+
+
+    <!-- http://www.w3.org/ns/shacl#name -->
+
+
+    <AnnotationProperty rdf:about="http://www.w3.org/ns/shacl#name"/>
+    
+
+
+    <!-- http://www.w3.org/ns/shacl#nodeKind -->
+
+
+    <AnnotationProperty rdf:about="http://www.w3.org/ns/shacl#nodeKind"/>
+    
+
+
+    <!-- http://www.w3.org/ns/shacl#path -->
+
+
+    <AnnotationProperty rdf:about="http://www.w3.org/ns/shacl#path"/>
+    
+
+
+    <!-- http://www.w3.org/ns/shacl#property -->
+
+
+    <AnnotationProperty rdf:about="http://www.w3.org/ns/shacl#property"/>
+    
+
+
+    <!-- http://www.w3.org/ns/shacl#targetClass -->
+
+
+    <AnnotationProperty rdf:about="http://www.w3.org/ns/shacl#targetClass"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://www.w3.org/ns/shacl#NodeShape -->
+
+
+    <Class rdf:about="http://www.w3.org/ns/shacl#NodeShape"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://example.com/concellos_0/shape -->
+
+
+    <NamedIndividual rdf:about="http://example.com/concellos_0/shape">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
+        <rdfs:label>Concello</rdfs:label>
+        <shacl:name>Concello</shacl:name>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#IRI"/>
+        <shacl:property rdf:nodeID="genid2"/>
+        <shacl:property rdf:nodeID="genid3"/>
+        <shacl:property rdf:nodeID="genid4"/>
+        <shacl:property rdf:nodeID="genid5"/>
+        <shacl:targetClass rdf:resource="http://example.org/def/gamere#Concello"/>
+    </NamedIndividual>
+    <rdf:Description rdf:nodeID="genid2">
+        <rdfs:label>pertenece a</rdfs:label>
+        <shacl:class rdf:resource="http://example.org/def/gamere#Provincia"/>
+        <shacl:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</shacl:maxCount>
+        <shacl:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</shacl:minCount>
+        <shacl:name>pertenece a</shacl:name>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#IRI"/>
+        <shacl:path rdf:resource="http://example.org/def/gamere#perteneceA"/>
+    </rdf:Description>
+    <rdf:Description rdf:nodeID="genid3">
+        <rdfs:label>same as</rdfs:label>
+        <shacl:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</shacl:maxCount>
+        <shacl:name>same as</shacl:name>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#IRI"/>
+        <shacl:path rdf:resource="http://www.w3.org/2002/07/owl#sameAs"/>
+    </rdf:Description>
+    <rdf:Description rdf:nodeID="genid4">
+        <rdfs:label>name concello</rdfs:label>
+        <shacl:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <shacl:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</shacl:maxCount>
+        <shacl:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</shacl:minCount>
+        <shacl:name>name concello</shacl:name>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#Literal"/>
+        <shacl:path rdf:resource="http://example.org/def/gamere#nameConcello"/>
+    </rdf:Description>
+    <rdf:Description rdf:nodeID="genid5">
+        <rdfs:label>codigo concello</rdfs:label>
+        <shacl:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <shacl:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</shacl:maxCount>
+        <shacl:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</shacl:minCount>
+        <shacl:name>codigo concello</shacl:name>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#Literal"/>
+        <shacl:path rdf:resource="http://example.org/def/gamere#codigoConcello"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://example.com/playas_0/shape -->
+
+
+    <NamedIndividual rdf:about="http://example.com/playas_0/shape">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
+        <rdfs:label>Praia</rdfs:label>
+        <shacl:name>Praia</shacl:name>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#IRI"/>
+        <shacl:property rdf:nodeID="genid6"/>
+        <shacl:property rdf:nodeID="genid7"/>
+        <shacl:property rdf:nodeID="genid8"/>
+        <shacl:property rdf:nodeID="genid9"/>
+        <shacl:property rdf:nodeID="genid10"/>
+        <shacl:property rdf:nodeID="genid11"/>
+        <shacl:property rdf:nodeID="genid12"/>
+        <shacl:property rdf:nodeID="genid13"/>
+        <shacl:targetClass rdf:resource="http://example.org/def/gamere#Praia"/>
+    </NamedIndividual>
+    <rdf:Description rdf:nodeID="genid6">
+        <rdfs:label>tipo arena</rdfs:label>
+        <shacl:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <shacl:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</shacl:maxCount>
+        <shacl:name>tipo arena</shacl:name>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#Literal"/>
+        <shacl:path rdf:resource="http://example.org/def/gamere#tipoArena"/>
+    </rdf:Description>
+    <rdf:Description rdf:nodeID="genid7">
+        <rdfs:label>url</rdfs:label>
+        <shacl:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</shacl:maxCount>
+        <shacl:name>url</shacl:name>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#IRI"/>
+        <shacl:path rdf:resource="http://example.org/def/gamere#url"/>
+    </rdf:Description>
+    <rdf:Description rdf:nodeID="genid8">
+        <rdfs:label>esta en</rdfs:label>
+        <shacl:class rdf:resource="http://example.org/def/gamere#Ubicacion"/>
+        <shacl:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</shacl:maxCount>
+        <shacl:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</shacl:minCount>
+        <shacl:name>esta en</shacl:name>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#IRI"/>
+        <shacl:path rdf:resource="http://example.org/def/gamere#estaEn"/>
+    </rdf:Description>
+    <rdf:Description rdf:nodeID="genid9">
+        <rdfs:label>lonxitude</rdfs:label>
+        <shacl:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <shacl:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</shacl:maxCount>
+        <shacl:name>lonxitude</shacl:name>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#Literal"/>
+        <shacl:path rdf:resource="http://example.org/def/gamere#lonxitude"/>
+    </rdf:Description>
+    <rdf:Description rdf:nodeID="genid10">
+        <rdfs:label>same as</rdfs:label>
+        <shacl:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</shacl:maxCount>
+        <shacl:name>same as</shacl:name>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#IRI"/>
+        <shacl:path rdf:resource="http://www.w3.org/2002/07/owl#sameAs"/>
+    </rdf:Description>
+    <rdf:Description rdf:nodeID="genid11">
+        <rdfs:label>entorno</rdfs:label>
+        <shacl:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <shacl:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</shacl:maxCount>
+        <shacl:name>entorno</shacl:name>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#Literal"/>
+        <shacl:path rdf:resource="http://example.org/def/gamere#entorno"/>
+    </rdf:Description>
+    <rdf:Description rdf:nodeID="genid12">
+        <rdfs:label>situada en</rdfs:label>
+        <shacl:class rdf:resource="http://example.org/def/gamere#Concello"/>
+        <shacl:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</shacl:maxCount>
+        <shacl:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</shacl:minCount>
+        <shacl:name>situada en</shacl:name>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#IRI"/>
+        <shacl:path rdf:resource="http://example.org/def/gamere#situadaEn"/>
+    </rdf:Description>
+    <rdf:Description rdf:nodeID="genid13">
+        <rdfs:label>nome praia</rdfs:label>
+        <shacl:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <shacl:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</shacl:maxCount>
+        <shacl:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</shacl:minCount>
+        <shacl:name>nome praia</shacl:name>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#Literal"/>
+        <shacl:path rdf:resource="http://example.org/def/gamere#nomePraia"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://example.com/provincias_0/shape -->
+
+
+    <NamedIndividual rdf:about="http://example.com/provincias_0/shape">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
+        <rdfs:label>Provincia</rdfs:label>
+        <shacl:name>Provincia</shacl:name>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#IRI"/>
+        <shacl:property rdf:nodeID="genid14"/>
+        <shacl:property rdf:nodeID="genid15"/>
+        <shacl:property rdf:nodeID="genid16"/>
+        <shacl:targetClass rdf:resource="http://example.org/def/gamere#Provincia"/>
+    </NamedIndividual>
+    <rdf:Description rdf:nodeID="genid14">
+        <rdfs:label>codigo provincia</rdfs:label>
+        <shacl:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <shacl:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</shacl:maxCount>
+        <shacl:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</shacl:minCount>
+        <shacl:name>codigo provincia</shacl:name>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#Literal"/>
+        <shacl:path rdf:resource="http://example.org/def/gamere#codigoProvincia"/>
+    </rdf:Description>
+    <rdf:Description rdf:nodeID="genid15">
+        <rdfs:label>name provincia</rdfs:label>
+        <shacl:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <shacl:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</shacl:maxCount>
+        <shacl:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</shacl:minCount>
+        <shacl:name>name provincia</shacl:name>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#Literal"/>
+        <shacl:path rdf:resource="http://example.org/def/gamere#nameProvincia"/>
+    </rdf:Description>
+    <rdf:Description rdf:nodeID="genid16">
+        <rdfs:label>same as</rdfs:label>
+        <shacl:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</shacl:maxCount>
+        <shacl:name>same as</shacl:name>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#IRI"/>
+        <shacl:path rdf:resource="http://www.w3.org/2002/07/owl#sameAs"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://example.com/ubicaciones_0/shape -->
+
+
+    <NamedIndividual rdf:about="http://example.com/ubicaciones_0/shape">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
+        <rdfs:label>Ubicacion</rdfs:label>
+        <shacl:name>Ubicacion</shacl:name>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#IRI"/>
+        <shacl:property rdf:nodeID="genid17"/>
+        <shacl:property rdf:nodeID="genid18"/>
+        <shacl:property rdf:nodeID="genid19"/>
+        <shacl:targetClass rdf:resource="http://example.org/def/gamere#Ubicacion"/>
+    </NamedIndividual>
+    <rdf:Description rdf:nodeID="genid17">
+        <rdfs:label>coordenadas x</rdfs:label>
+        <shacl:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+        <shacl:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</shacl:maxCount>
+        <shacl:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</shacl:minCount>
+        <shacl:name>coordenadas x</shacl:name>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#Literal"/>
+        <shacl:path rdf:resource="http://example.org/def/gamere#coordenadasX"/>
+    </rdf:Description>
+    <rdf:Description rdf:nodeID="genid18">
+        <rdfs:label>coordenadas y</rdfs:label>
+        <shacl:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+        <shacl:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</shacl:maxCount>
+        <shacl:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</shacl:minCount>
+        <shacl:name>coordenadas y</shacl:name>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#Literal"/>
+        <shacl:path rdf:resource="http://example.org/def/gamere#coordenadasY"/>
+    </rdf:Description>
+    <rdf:Description rdf:nodeID="genid19">
+        <rdfs:label>descripcion</rdfs:label>
+        <shacl:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <shacl:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</shacl:maxCount>
+        <shacl:name>descripcion</shacl:name>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#Literal"/>
+        <shacl:path rdf:resource="http://example.org/def/gamere#descripcion"/>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/ -->
+
+
